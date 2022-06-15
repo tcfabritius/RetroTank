@@ -352,11 +352,13 @@
 "Assets/Scripts/AIControls.cs"
 "Assets/Scripts/DestroyAfterParticles.cs"
 "Assets/Scripts/Follow.cs"
+"Assets/Scripts/GameController.cs"
 "Assets/Scripts/Health.cs"
 "Assets/Scripts/HelloWorld.cs"
 "Assets/Scripts/PlayerControls.cs"
 "Assets/Scripts/Projectile.cs"
 "Assets/Scripts/SpawnBlocks.cs"
+"Assets/Scripts/Spawner.cs"
 -langversion:9.0
 
 /deterministic
