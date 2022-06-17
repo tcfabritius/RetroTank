@@ -9,6 +9,7 @@ public class Spawner : MonoBehaviour
 
     public Collider area;
 
+    public float spawnHeight;
     public float range;
 
     public GameObject SpawnPlayer()
@@ -29,7 +30,7 @@ public class Spawner : MonoBehaviour
         float randomx = Random.Range(minPoint.x, maxPoint.x);
         float randomz = Random.Range(minPoint.z, maxPoint.z);
 
-        Vector3 position = new Vector3(randomx, maxPoint.y, randomz);
+        Vector3 position = new Vector3(randomx, maxPoint.y + spawnHeight, randomz);
         Collider[] colliders = Physics.OverlapSphere(position, range);
         for(int i = 0; i < colliders.Length; i++)
         {

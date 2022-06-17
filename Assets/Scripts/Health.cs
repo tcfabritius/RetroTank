@@ -23,12 +23,22 @@ public class Health : MonoBehaviour
         meshRenderers = GetComponentsInChildren<MeshRenderer>();
         originalColor = meshRenderers[0].material.color;
         originalEmissionColor = meshRenderers[0].material.GetColor("_EmissionColor");
+
+        if (gameObject.CompareTag("Player"))
+        {
+            GameController.instance.SetHealth(currentHealth, maxHealth);
+        }
     }
 
     public void ReduceHealth(float damage)
     {
         StartCoroutine(DamageFlash());
         currentHealth -= damage;
+        if (gameObject.CompareTag("Player"))
+        {
+            GameController.instance.SetHealth(currentHealth, maxHealth);
+        }
+
         if(currentHealth <= 0 && !dead)
         {
             dead = true;

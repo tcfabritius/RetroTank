@@ -355,10 +355,12 @@
 "Assets/Scripts/GameController.cs"
 "Assets/Scripts/Health.cs"
 "Assets/Scripts/HelloWorld.cs"
+"Assets/Scripts/MainMenuController.cs"
 "Assets/Scripts/PlayerControls.cs"
 "Assets/Scripts/Projectile.cs"
 "Assets/Scripts/SpawnBlocks.cs"
 "Assets/Scripts/Spawner.cs"
+"Assets/Scripts/UIController.cs"
 -langversion:9.0
 
 /deterministic
