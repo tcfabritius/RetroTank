@@ -13,6 +13,8 @@ public class PlayerControls : MonoBehaviour
     public Transform muzzle;
     public GameObject projectile;
 
+    public AudioSource audioSource;
+
     private Rigidbody rb;
     private Camera mainCamera;
     private float maxRayDistance = 100f;
@@ -34,6 +36,7 @@ public class PlayerControls : MonoBehaviour
         {
             if (Input.GetButtonDown("Fire1"))
             {
+                audioSource.Play();
                 GameObject proj = Instantiate(projectile, muzzle.position, muzzle.rotation);
                 proj.GetComponent<Projectile>().shooterTag = tag;
                 t = shootingCooldown;
